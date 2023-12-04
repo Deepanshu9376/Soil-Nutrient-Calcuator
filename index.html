@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="n.css">
+    <title>Soil Nutrient Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Soil Nutrient Calculator</h1>
+        <label for="cropType">Select Crop Type:</label>
+        <select id="cropType" onchange="updateCropList()">
+            <option value="kharif">Kharif</option>
+            <option value="rabi">Rabi</option>
+        </select>
+
+        <label for="crop">Select Crop:</label>
+        <select id="crop">
+            <!-- Options dynamically populated based on crop type selection -->
+        </select>
+
+        <label for="n">Concentration of N:</label>
+        <input type="number" id="n" placeholder="Enter N concentration">
+
+        <label for="p">Concentration of P:</label>
+        <input type="number" id="p" placeholder="Enter P concentration">
+
+        <label for="k">Concentration of K:</label>
+        <input type="number" id="k" placeholder="Enter K concentration">
+
+        <button onclick="calculateNutrient()">Calculate</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script src="n.js"></script>
+</body>
+</html>
